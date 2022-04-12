@@ -17,6 +17,7 @@ if (!(2 + 2 == 4)) {
 - regression testing: make sure new code doesn't reintroduce old bugs
 
 ## Assertions types
+Note: these are specific to `doctest`, but most other test harnesses offer similar functionality.
 - `REQUIRE`: if the assertion fails, exit the current unit test
 - `CHECK`: if the assertion fails, continue execution anyway
 - `WARN`: if the assertion fails, just print a message
