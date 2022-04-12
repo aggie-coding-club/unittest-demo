@@ -17,6 +17,11 @@ if (!(2 + 2 == 4)) {
 - regression testing: make sure new code doesn't reintroduce old bugs
 
 ## Running the stuff here
+If you don't have `make` or `g++`, install them. Example for Ubuntu:
+```sh
+sudo apt update -y
+sudo apt install build-essential -y
+```
 To run the test suite, run
 ```sh
 make test
