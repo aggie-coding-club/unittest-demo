@@ -6,7 +6,7 @@ This repo contains some (flawed) C++ code. We'll use https://github.com/doctest/
 - assertion: check if something is true; if it's not, explode (example below)
 ```c++
 // this...
-CHECK(2 + 2 == 4);
+REQUIRE(2 + 2 == 4);
 // ...expands (basically) to this
 if (!(2 + 2 == 4)) {
     throw std::runtime_error("assertion failed, here's what actually happened: ...");
@@ -15,6 +15,11 @@ if (!(2 + 2 == 4)) {
 - test harness/framework: tool (usually a library) that automates unit test execution
 - CI (continous integration): run your test harness automatically whenever you add more code
 - regression testing: make sure new code doesn't reintroduce old bugs
+
+## Assertions types
+- `REQUIRE`: if the assertion fails, exit the current unit test
+- `CHECK`: if the assertion fails, continue execution anyway
+- `WARN`: if the assertion fails, just print a message
 
 ## Running the stuff here
 If you don't have `make` or `g++`, install them. Example for Ubuntu:
